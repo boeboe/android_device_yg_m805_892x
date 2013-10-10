@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/tomtec/m805_892x/m805_892x-vendor.mk)
+$(call inherit-product-if-exists, vendor/yg/m805_892x/m805_892x-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/tomtec/m805_892x/overlay
+DEVICE_PACKAGE_OVERLAYS += device/yg/m805_892x/overlay
 
-LOCAL_PATH := device/tomtec/m805_892x
+LOCAL_PATH := device/yg/m805_892x
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
